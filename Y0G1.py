@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 
-import socket
-import os
+import socket   #Module that simplifies the task of writing network servers
+import os       #Module that provides a portable way of using operating system dependent functionality
 
-HOST = "10.0.2.15"
-PORT = 2000
+HOST = "10.0.2.15"  #The Private IP address of the Host Machine
+PORT = 2000         #The port that you choose to act as an open target
 
-print(" Y88b   d88P  .d8888b.   .d8888b. 8888888")
+print(" Y88b   d88P  .d8888b.   .d8888b. 8888888")      #Ascii of Y0G1
 print("  Y88b d88P  d88P  Y88b d88P  Y88b   888  ")
 print("   Y88o88P   888    888 888    888   888  ")
 print("    Y888P    888    888 888          888  ")
@@ -15,7 +15,7 @@ print("     888     888    888 888    888   888  ")
 print("     888     Y88b  d88P Y88b  d88P   888  ")
 print("     888       Y8888P    Y8888P88 8888888 ")  
 
-print("        (())___(() ")
+print("        (())___(() ")            #Ascii of mascot
 print("        /      \\\\")
 print("       ( /    \ \\\\")
 print("        \ o o    /")
@@ -29,7 +29,7 @@ print("      )  '._____)    /")
 print("   (((____.--(((____/")
 
 
-print("YogiBear Honeypot Initialized")
+print("YogiBear Honeypot Initialized")      #The indication that the Honeypot is now activated
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind((HOST, PORT))
