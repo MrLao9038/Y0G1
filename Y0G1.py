@@ -31,14 +31,14 @@ print("   (((____.--(((____/")
 
 print("YogiBear Honeypot Initialized")      #The indication that the Honeypot is now activated
 
-server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server.bind((HOST, PORT))
-server.listen()
+server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)      #Create a socket (SOCK_STREAM means a TCP socket)
+server.bind((HOST, PORT))                                       #Connect to server and send data
+server.listen()                                                 #Server will listen for incoming requests
 
 while True:
-    conn, addr = server.accept()
-    print("Honeypot has been visited by", addr)
-    conn.send(("Welcome to Ubuntu 18.04.4 LTS (GNU/LINUX 4.18.0-15-generic x86_64)").encode())
+    conn, addr = server.accept()                                #Accept a request from the socket
+    print("Honeypot has been visited by", addr)                 #Indicate which IP adress and port has been used to connect to Honeypot
+    conn.send(("Welcome to Ubuntu 18.04.4 LTS (GNU/LINUX 4.18.0-15-generic x86_64)").encode())          #Send data to the client IP address
     conn.send(("\n").encode())
     conn.send((" * Documentation:   https://help.ubuntu.com").encode())
     conn.send(("\n").encode())
@@ -76,6 +76,6 @@ while True:
     conn.send(("\n").encode())
     conn.send(("sansforensics@siftworkstation:~$").encode())
     conn.send(("\n").encode())
-    os.system("/usr/bin/wireshark")
-conn.close()
+    os.system("/usr/bin/wireshark")        #Excute wireshark to indicate that someone has connected to the Honeypot
+conn.close()                               #Close out the connection
 
