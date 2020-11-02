@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3    #Select interpreter for BASH
 
 import socket   #Module that simplifies the task of writing network servers
 import os       #Module that provides a portable way of using operating system dependent functionality
