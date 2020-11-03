@@ -42,7 +42,7 @@ while True:
     conn.send(("\n").encode())
     conn.send((" * Documentation:   https://help.ubuntu.com").encode())
     conn.send(("\n").encode())
-    conn.send((" * Management:       https://landscape.canonical.com").encode())
+    conn.send((" * Management:      https://landscape.canonical.com").encode())
     conn.send(("\n").encode())
     conn.send((" * Support:         https://ubuntu/com/advantage").encode())
     conn.send(("\n").encode())
